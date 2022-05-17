@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import * as ReactDOM from "react-dom";
 
@@ -40,10 +40,25 @@ const Navigation = () => {
     }
   };
 
+  //nav bg opacity
+  const [bgOpacity, setBgOpacity] = useState("bg-opacity-0");
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        setBgOpacity("bg-opacity-30");
+      } else {
+        setBgOpacity("bg-opacity-0");
+      }
+    });
+  });
+
   return (
     <>
       {ReactDOM.createPortal(
-        <div className="flex flex-row justify-between items-center px-7 fixed top-0 left-0 w-full h-[70px] z-40">
+        <div
+          className={`flex flex-row justify-between items-center px-7 fixed top-0 left-0 w-full h-[70px] z-40 bg-black transition duration-300 ease-linear ${bgOpacity}`}
+        >
           <h3 className="text-3xl text-white font-bold font-barlow">
             sunnyside
           </h3>

@@ -28,7 +28,7 @@
 }
 
 .nav-mobile {
-  @apply fixed top-[12vh] left-1/2 -translate-x-1/2 w-[85vw] h-[400px] z-40 bg-white -translate-y-[150%] opacity-0;
+  @apply fixed top-[12vh] left-1/2 -translate-x-1/2 w-[85vw] h-[400px] z-40 bg-white -translate-y-[150%] opacity-0  shadow-2xl;
 }
 
 .nav-mobile-triangle {

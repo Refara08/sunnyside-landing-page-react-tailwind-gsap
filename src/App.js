@@ -1,6 +1,9 @@
 import Navigation from "./component/Navigation/Navigation";
 import Header from "./component/header/Header";
 import About from "./component/about/About";
+import Services from "./component/services/Services";
+import TestimonialProjects from "./component/testimonial-projects/TestimonialProjects";
+import Footer from "./component/footer/Footer";
 
 function App() {
   return (
@@ -8,7 +11,9 @@ function App() {
       <Navigation />
       <Header />
       <About />
-      <div className="block w-full h-[200vh] bg-black"></div>
+      <Services />
+      <TestimonialProjects />
+      <Footer />
     </div>
   );
 }

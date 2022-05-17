@@ -1,7 +1,4 @@
 const CardAbout = (props) => {
-  console.log(props.colorAccent);
-  console.log(typeof props.colorAccent);
-
   return (
     <div>
       <div>
