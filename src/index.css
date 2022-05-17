@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-header {
+.header {
   background-image: url(./img/mobile/image-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +12,7 @@ header {
 }
 
 .hamburger {
-  @apply w-[30px] aspect-square flex flex-col justify-center items-center cursor-pointer;
+  @apply w-[30px] aspect-square flex md:hidden flex-col justify-center items-center cursor-pointer;
 }
 
 .hamburger > span {
@@ -22,6 +22,7 @@ header {
 .hamburger > span:nth-child(1) {
   @apply -translate-y-[300%];
 }
+
 .hamburger > span:nth-child(3) {
   @apply translate-y-[300%];
 }
