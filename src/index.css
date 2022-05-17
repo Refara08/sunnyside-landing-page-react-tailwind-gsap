@@ -26,3 +26,36 @@
 .hamburger > span:nth-child(3) {
   @apply translate-y-[300%];
 }
+
+.nav-mobile {
+  @apply fixed top-[12vh] left-1/2 -translate-x-1/2 w-[85vw] h-[400px] z-40 bg-white -translate-y-[150%] opacity-0;
+}
+
+.nav-mobile-triangle {
+  @apply visible relative -mt-6;
+}
+
+.nav-mobile-triangle {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid white;
+  border-left: 100px solid transparent;
+}
+
+.mobile-links {
+  @apply flex flex-col justify-evenly items-center h-full text-xl font-barlow font-bold text-dark-grayish-blue;
+}
+
+.mobile-links a {
+  @apply py-4 px-8 rounded-full;
+}
+
+.mobile-links a:hover,
+.mobile-links a:active,
+.mobile-links a.active {
+  @apply transition-all bg-yellow font-fraunces font-bold text-very-dark-desaturated-blue uppercase text-base;
+}

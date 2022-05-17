@@ -12,9 +12,9 @@ const Header = (props) => {
     <header className="header">
       <div className={style.headerContent}>
         <h1 className={style.headerText}>we are creatives</h1>
-        <div className="">
+        <a href="/" className="">
           <img src={iconArrowDownMobile} alt="arrow down icon" />
-        </div>
+        </a>
       </div>
     </header>
   );
