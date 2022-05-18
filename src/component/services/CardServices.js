@@ -1,23 +1,15 @@
 const CardServices = (props) => {
   return (
-    <div className="relative">
-      <img
-        className="block md:hidden"
-        src={props.imgMobile}
-        alt={props.title}
-      />
-      <img
-        className="hidden md:block"
-        src={props.imgDesktop}
-        alt={props.title}
-      />
+    <div
+      className={`services-card ${props.imgMobile} ${props.imgDesktop} bg-cover bg-center bg-no-repeat h-[650px] flex flex-col justify-end items-center`}
+    >
       <div
-        className={`${props.textColor} absolute bottom-[8vh] px-8 flex flex-col justify-center items-center gap-6`}
+        className={`${props.textColor} py-16 px-8 lg:py-24 lg:px-24 xl:px-40`}
       >
-        <h2 className="font-fraunces font-extrabold text-center text-4xl">
+        <h2 className="font-fraunces font-extrabold text-center mb-6 text-4xl sm:text-5xl">
           {props.title}
         </h2>
-        <p className="text-center font-barlow text-lg font-semibold">
+        <p className="text-center font-barlow text-lg sm:text-xl font-semibold">
           {props.text}
         </p>
       </div>

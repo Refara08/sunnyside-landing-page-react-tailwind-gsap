@@ -12,6 +12,7 @@ const content = [
     text: "We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
     button: "Learn more",
     colorAccent: "before:bg-yellow",
+    colStart: "row-start-1",
   },
   {
     title: "Stand out to the right audience",
@@ -20,6 +21,7 @@ const content = [
     text: "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.",
     button: "Learn more",
     colorAccent: "before:bg-soft-red",
+    colStart: "",
   },
 ];
 
@@ -35,6 +37,7 @@ const About = () => {
           imgMobile={item.imgMobile}
           imgDesktop={item.imgDesktop}
           colorAccent={item.colorAccent}
+          colStart={item.colStart}
         />
       ))}
     </div>

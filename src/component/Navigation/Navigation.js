@@ -24,11 +24,13 @@ const Navigation = () => {
         .to(q(".line1"), { yPercent: 400 }, "<")
         .to(q(".line2"), { opacity: 0 }, "<")
         .to(q(".line3"), { yPercent: -400 }, "<")
-        .to(q(".line1"), { yPercent: 400, rotate: 45 }, "<.5")
-        .to(q(".line3"), { yPercent: -400, rotate: 135 }, "<");
+        .to(q(".line1"), { yPercent: 400, rotate: 90 }, "<.5")
+        .to(q(".line1"), { yPercent: 400, rotate: 135 }, "<.5")
+        .to(q(".line3"), { yPercent: -400, rotate: 45 }, "<");
     } else {
       tl.to(q(".line3"), { yPercent: -400, rotate: 0 })
-        .to(q(".line1"), { yPercent: 400, rotate: 0 }, "<")
+        .to(q(".line1"), { yPercent: 400, rotate: 90 }, "<")
+        .to(q(".line1"), { yPercent: 400, rotate: 0 }, "<.5")
         .to(q(".line3"), { yPercent: 0 }, "<.5")
         .to(q(".line2"), { opacity: 1 }, "<")
         .to(q(".line1"), { yPercent: 0 }, "<")
@@ -57,9 +59,9 @@ const Navigation = () => {
     <>
       {ReactDOM.createPortal(
         <div
-          className={`flex flex-row justify-between items-center px-7 fixed top-0 left-0 w-full h-[70px] z-40 bg-black transition duration-300 ease-linear ${bgOpacity}`}
+          className={`flex flex-row justify-between items-center px-7 fixed top-0 left-0 w-full h-[70px] md:h-[120px] z-40 bg-black transition duration-300 ease-linear ${bgOpacity}`}
         >
-          <h3 className="text-3xl text-white font-bold font-barlow">
+          <h3 className="text-3xl sm:text-4xl text-white font-bold font-barlow">
             sunnyside
           </h3>
           <nav>
@@ -71,6 +73,14 @@ const Navigation = () => {
               <span className="line1"></span>
               <span className="line2"></span>
               <span className="line3"></span>
+            </div>
+            <div className="desktop-links">
+              <a href="/">About</a>
+              <a href="/">Services</a>
+              <a href="/">Projects</a>
+              <a className="active" href="/">
+                Contact
+              </a>
             </div>
           </nav>
         </div>,

@@ -28,18 +28,20 @@ const content = [
 const Testimonial = () => {
   return (
     <div className="py-20">
-      <h2 className="text-center font-fraunces uppercase font-extrabold text-xl tracking-[0.25em] text-grayish-blue mb-20">
+      <h2 className="text-center font-fraunces uppercase font-extrabold text-xl md:text-2xl tracking-[0.25em] text-grayish-blue mb-20">
         Client Testimonials
       </h2>
-      {content.map((item, index) => (
-        <CardTestimonial
-          key={index}
-          text={item.text}
-          clientName={item.clientName}
-          clientPosition={item.clientPosition}
-          imageAvatar={item.imageAvatar}
-        />
-      ))}
+      <div className="md:grid md:grid-cols-3 md:gap-4 md:px-10 lg:px-28">
+        {content.map((item, index) => (
+          <CardTestimonial
+            key={index}
+            text={item.text}
+            clientName={item.clientName}
+            clientPosition={item.clientPosition}
+            imageAvatar={item.imageAvatar}
+          />
+        ))}
+      </div>
     </div>
   );
 };

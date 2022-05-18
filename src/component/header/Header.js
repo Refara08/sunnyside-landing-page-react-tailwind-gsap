@@ -5,7 +5,7 @@ const Header = (props) => {
     headerContent:
       "container mx-auto h-[680px] flex flex-col justify-center items-center gap-12",
     headerText:
-      "text-5xl font-bold text-center text-white font-fraunces uppercase tracking-widest",
+      "text-5xl md:text-6xl font-bold text-center text-white font-fraunces uppercase tracking-widest px-10 md:mb-10 md:tracking-[0.15em]",
   };
 
   return (

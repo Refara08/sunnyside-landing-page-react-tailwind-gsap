@@ -9,6 +9,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  @apply md:h-screen md:pt-24;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url(./img/desktop/image-header.jpg);
+  }
 }
 
 .hamburger {
@@ -57,5 +64,32 @@
 .mobile-links a:hover,
 .mobile-links a:active,
 .mobile-links a.active {
-  @apply transition-all bg-yellow font-fraunces font-bold text-very-dark-desaturated-blue uppercase text-base;
+  @apply transition-all duration-300 ease-linear bg-yellow font-fraunces font-bold text-very-dark-desaturated-blue uppercase text-base;
 }
+
+.desktop-links {
+  @apply hidden md:flex flex-row justify-evenly items-center font-barlow text-white text-xl;
+}
+
+.desktop-links a {
+  @apply py-4 px-6 mx-2;
+}
+
+.desktop-links a:hover,
+.desktop-links a:active,
+.desktop-links a.active {
+  @apply transition-all duration-300 ease-linear bg-white text-very-dark-desaturated-blue font-fraunces font-extrabold  uppercase text-sm rounded-full;
+}
+
+/* .services-card {
+  background-image: url(./img/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .services-card {
+    background-image: url(./img/desktop/image-header.jpg);
+  }
+} */
