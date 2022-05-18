@@ -14,7 +14,7 @@ const CardAbout = (props) => {
         />
       </div>
       <div
-        className={`${props.anim} py-16 px-10 flex flex-col justify-center items-center md:items-start md:max-w-2xl md:mx-auto gap-8 md:gap-16 ${props.colStart}`}
+        className={`py-16 px-10 flex flex-col justify-center items-center md:items-start md:max-w-2xl md:mx-auto gap-8 md:gap-16 ${props.colStart} ${props.anim}`}
       >
         <h2 className="font-fraunces font-extrabold text-center text-4xl text-very-dark-desaturated-blue md:text-left md:text-6xl">
           {props.title}

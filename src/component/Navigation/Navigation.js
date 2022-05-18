@@ -18,7 +18,6 @@ const Navigation = () => {
   const tl = gsap.timeline();
 
   const toggleHamburger = () => {
-    console.log("clicked");
     setIsHamburgerActive((prev) => !prev);
 
     if (!isHamburgerActive) {
@@ -99,8 +98,30 @@ const Navigation = () => {
     <>
       {ReactDOM.createPortal(
         <div
+          ref={overlayMobileNavRef}
+          onClick={toggleHamburger}
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-0"
+        ></div>,
+        navContainer
+      )}
+      {ReactDOM.createPortal(
+        <div ref={mobileNavRef} className="nav-mobile">
+          <div className="nav-mobile-triangle" />
+          <div className="mobile-links">
+            <a href="/">About</a>
+            <a href="/">Services</a>
+            <a href="/">Projects</a>
+            <a className="active" href="/">
+              Contact
+            </a>
+          </div>
+        </div>,
+        navContainer
+      )}
+      {ReactDOM.createPortal(
+        <div
           ref={navRef}
-          className={`flex flex-row justify-between items-center px-7 fixed top-0 left-0 w-full h-[70px] md:h-[120px] z-40 bg-black transition duration-300 ease-linear ${bgOpacity}`}
+          className={`flex flex-row justify-between items-center px-4 sm:px-7 fixed top-0 left-0 w-screen h-[70px] md:h-[120px] z-40 bg-black transition duration-300 ease-linear ${bgOpacity}`}
         >
           <h3 className="text-3xl sm:text-4xl text-white font-bold font-barlow">
             sunnyside
@@ -124,28 +145,6 @@ const Navigation = () => {
               </a>
             </div>
           </nav>
-        </div>,
-        navContainer
-      )}
-      {ReactDOM.createPortal(
-        <div
-          ref={overlayMobileNavRef}
-          onClick={toggleHamburger}
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-0"
-        ></div>,
-        navContainer
-      )}
-      {ReactDOM.createPortal(
-        <div ref={mobileNavRef} className="nav-mobile">
-          <div className="nav-mobile-triangle" />
-          <div className="mobile-links">
-            <a href="/">About</a>
-            <a href="/">Services</a>
-            <a href="/">Projects</a>
-            <a className="active" href="/">
-              Contact
-            </a>
-          </div>
         </div>,
         navContainer
       )}

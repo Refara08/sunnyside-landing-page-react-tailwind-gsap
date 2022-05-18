@@ -29,7 +29,7 @@ const content = [
 
 const About = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       {content.map((item, index) => (
         <CardAbout
           key={index}

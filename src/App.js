@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useEffect } from "react";
 
 import Navigation from "./component/Navigation/Navigation";
 import Header from "./component/header/Header";
@@ -14,10 +14,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   //animasi fade-in function
-  const el = useRef();
-  const q = gsap.utils.selector(el);
+  const overallAnim = useRef();
+  const q = gsap.utils.selector(overallAnim);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     q(".anim-bottom").forEach((bottom) => {
       gsap.fromTo(
         bottom,
@@ -74,32 +74,14 @@ function App() {
         opacity: 1,
         stagger: 0.25,
         scrollTrigger: {
-          trigger: q(".anim-top-stgr"),
+          trigger: q(".anim-top-stgr-4"),
           toggleActions: "restart none none none",
           scrub: 1,
           start: "top bottom",
-          end: "bottom top",
+          end: "bottom 40%",
         },
       }
     );
-    q(".anim-right").forEach((right) => {
-      gsap.fromTo(
-        right,
-        { x: 100, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: right,
-            toggleActions: "restart none none none",
-            scrub: 1,
-            start: "top bottom",
-            end: "bottom 95%",
-          },
-        }
-      );
-    });
     q(".anim-left").forEach((left) => {
       gsap.fromTo(
         left,
@@ -118,17 +100,37 @@ function App() {
         }
       );
     });
+    q(".anim-right").forEach((right) => {
+      gsap.fromTo(
+        right,
+        { x: 100, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: right,
+            toggleActions: "restart none none none",
+            scrub: 1,
+            start: "top bottom",
+            end: "bottom 95%",
+          },
+        }
+      );
+    });
   });
 
   return (
-    <div ref={el} className="App">
+    <>
       <Navigation />
       <Header />
-      <About />
-      <Services />
-      <TestimonialProjects />
-      <Footer />
-    </div>
+      <div ref={overallAnim}>
+        <About />
+        <Services />
+        <TestimonialProjects />
+        <Footer />
+      </div>
+    </>
   );
 }
 
