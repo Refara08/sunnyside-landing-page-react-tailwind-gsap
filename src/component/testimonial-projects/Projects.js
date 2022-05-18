@@ -34,7 +34,7 @@ const gallery = [
 
 const Projects = () => {
   return (
-    <div className="grid grid-cols-2 md:flex">
+    <div className="grid grid-cols-2 md:flex overflow-hidden">
       {gallery.map((item) => (
         <CardProjects
           key={item.id}

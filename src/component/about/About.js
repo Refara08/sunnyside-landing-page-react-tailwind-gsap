@@ -13,6 +13,7 @@ const content = [
     button: "Learn more",
     colorAccent: "before:bg-yellow",
     colStart: "row-start-1",
+    anim: "anim-left",
   },
   {
     title: "Stand out to the right audience",
@@ -22,6 +23,7 @@ const content = [
     button: "Learn more",
     colorAccent: "before:bg-soft-red",
     colStart: "",
+    anim: "anim-right",
   },
 ];
 
@@ -38,6 +40,7 @@ const About = () => {
           imgDesktop={item.imgDesktop}
           colorAccent={item.colorAccent}
           colStart={item.colStart}
+          anim={item.anim}
         />
       ))}
     </div>

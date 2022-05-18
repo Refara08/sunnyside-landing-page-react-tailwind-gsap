@@ -1,6 +1,6 @@
 const CardTestimonial = (props) => {
   return (
-    <div className="flex flex-col justify-evenly items-center gap-6 px-8 text-center mb-20">
+    <div className="flex flex-col justify-evenly items-center gap-6 px-8 text-center mb-2 anim-top-stgr">
       <div className="w-[90px] aspect-square rounded-full overflow-hidden">
         <img src={props.imageAvatar} alt={props.clientName} />
       </div>

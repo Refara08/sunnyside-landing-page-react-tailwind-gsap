@@ -1,20 +1,20 @@
 const CardAbout = (props) => {
   return (
     <div className="md:grid md:grid-cols-2">
-      <div className="">
+      <div className="overflow-hidden">
         <img
-          className="block md:hidden"
+          className="anim-top block md:hidden"
           src={props.imgMobile}
           alt={props.title}
         />
         <img
-          className="hidden md:block md:object-cover h-full xl:h-auto xl:w-full"
+          className="anim-top hidden md:block md:object-cover h-full xl:h-auto xl:w-full"
           src={props.imgDesktop}
           alt={props.title}
         />
       </div>
       <div
-        className={`py-16 px-10 flex flex-col justify-center items-center md:items-start md:max-w-2xl md:mx-auto gap-8 md:gap-16 ${props.colStart}`}
+        className={`${props.anim} py-16 px-10 flex flex-col justify-center items-center md:items-start md:max-w-2xl md:mx-auto gap-8 md:gap-16 ${props.colStart}`}
       >
         <h2 className="font-fraunces font-extrabold text-center text-4xl text-very-dark-desaturated-blue md:text-left md:text-6xl">
           {props.title}

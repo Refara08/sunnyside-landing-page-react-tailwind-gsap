@@ -27,8 +27,8 @@ const content = [
 
 const Testimonial = () => {
   return (
-    <div className="py-20">
-      <h2 className="text-center font-fraunces uppercase font-extrabold text-xl md:text-2xl tracking-[0.25em] text-grayish-blue mb-20">
+    <div className="py-20 overflow-hidden">
+      <h2 className="text-center font-fraunces uppercase font-extrabold text-xl md:text-2xl tracking-[0.25em] text-grayish-blue mb-20 z-10 anim-top">
         Client Testimonials
       </h2>
       <div className="md:grid md:grid-cols-3 md:gap-4 md:px-10 lg:px-28">
