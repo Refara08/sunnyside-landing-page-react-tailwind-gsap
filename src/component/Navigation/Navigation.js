@@ -10,12 +10,11 @@ const Navigation = () => {
   const navContainer = document.getElementById("nav");
   const hamburgerRef = useRef();
   const mobileNavRef = useRef();
-  const overlayMobileNavRef = useRef();
   const q = gsap.utils.selector(hamburgerRef);
 
   const [isHamburgerActive, setIsHamburgerActive] = useState(false);
 
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({ defaults: { duration: 0.3, ease: "power2.out" } });
 
   const toggleHamburger = () => {
     setIsHamburgerActive((prev) => !prev);
@@ -26,21 +25,19 @@ const Navigation = () => {
         opacity: 1,
         ease: "power3.out",
       })
-        .to(overlayMobileNavRef, { opacity: 0.5 }, "<")
         .to(q(".line1"), { yPercent: 400 }, "<")
         .to(q(".line2"), { opacity: 0 }, "<")
         .to(q(".line3"), { yPercent: -400 }, "<")
-        .to(q(".line1"), { yPercent: 400, rotate: 90 }, "<.5")
-        .to(q(".line1"), { yPercent: 400, rotate: 135 }, "<.5")
+        .to(q(".line1"), { yPercent: 400, rotate: 90 }, "<.15")
+        .to(q(".line1"), { yPercent: 400, rotate: 135 }, "<.15")
         .to(q(".line3"), { yPercent: -400, rotate: 45 }, "<");
     } else {
       tl.to(q(".line3"), { yPercent: -400, rotate: 0 })
         .to(q(".line1"), { yPercent: 400, rotate: 90 }, "<")
-        .to(q(".line1"), { yPercent: 400, rotate: 0 }, "<.5")
-        .to(q(".line3"), { yPercent: 0 }, "<.5")
+        .to(q(".line1"), { yPercent: 400, rotate: 0 }, "<.15")
+        .to(q(".line3"), { yPercent: 0 }, "<.15")
         .to(q(".line2"), { opacity: 1 }, "<")
         .to(q(".line1"), { yPercent: 0 }, "<")
-        .to(overlayMobileNavRef, { opacity: 0 }, "<")
         .to(
           mobileNavRef.current,
           { yPercent: 0, opacity: 0, ease: "power3.in" },
@@ -96,14 +93,14 @@ const Navigation = () => {
 
   return (
     <>
-      {ReactDOM.createPortal(
-        <div
-          ref={overlayMobileNavRef}
-          onClick={toggleHamburger}
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-0"
-        ></div>,
-        navContainer
-      )}
+      {isHamburgerActive &&
+        ReactDOM.createPortal(
+          <div
+            onClick={toggleHamburger}
+            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-0 z-30"
+          ></div>,
+          navContainer
+        )}
       {ReactDOM.createPortal(
         <div ref={mobileNavRef} className="nav-mobile">
           <div className="nav-mobile-triangle" />
