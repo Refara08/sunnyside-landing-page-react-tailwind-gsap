@@ -2,6 +2,8 @@ import IconFacebook from "../../img/icon-facebook.js";
 import IconInstagram from "../../img/icon-instagram.js";
 import IconTwitter from "../../img/icon-twitter.js";
 import IconPinterest from "../../img/icon-pinterest.js";
+import IconCodepen from "../../img/icon-codepen.js";
+import IconGithub from "../../img/icon-github.js";
 
 const Footer = () => {
   return (
@@ -37,14 +39,40 @@ const Footer = () => {
             size="1.75rem"
             className="hover:text-white transition duration-300 ease-linear"
           />
-          <IconTwitter
-            size="1.75rem"
-            className="hover:text-white transition duration-300 ease-linear"
-          />
           <IconPinterest
             size="1.75rem"
             className="hover:text-white transition duration-300 ease-linear"
           />
+          <a
+            href="https://twitter.com/GRefantero"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <IconTwitter
+              size="1.75rem"
+              className="hover:text-white transition duration-300 ease-linear"
+            />
+          </a>
+          <a
+            href="https://codepen.io/refantero"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <IconCodepen
+              size="1.75rem"
+              className="hover:text-white transition duration-300 ease-linear"
+            />
+          </a>
+          <a
+            href="https://github.com/Refara08"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <IconGithub
+              size="1.75rem"
+              className="hover:text-white transition duration-300 ease-linear"
+            />
+          </a>
         </div>
       </div>
     </div>
