@@ -1,4 +1,62 @@
-# Getting Started with Create React App
+# Frontend Mentor - Sunnyside agency landing page solution
+
+This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [github](https://github.com/Refara08/sunnyside-landing-page-react-tailwind-gsap)
+- Live Site URL: [sunnyside](https://refara08-sunnyside-landing-page.pages.dev)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Tailwindcss](https://tailwindcss.com) - CSS Framework
+- [React](https://reactjs.org/) - JS library
+- [GSAP](https://greensock.com) - JS library
+
+## Author
+
+- Frontend Mentor - [@Refara08](https://www.frontendmentor.io/profile/Refara08)
+- Github - [Refara08](https://github.com/Refara08)
+- Codepen - [Gema Refantero](https://codepen.io/refantero)
+- Twitter - [@GRefantero](https://twitter.com/GRefantero)
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
